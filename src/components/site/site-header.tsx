@@ -30,8 +30,8 @@ export function SiteHeader() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 border-b transition-all duration-300",
         scrolled
-          ? "border-zinc-200/80 bg-white/85 shadow-[0_1px_0_0_rgba(0,0,0,0.02)] backdrop-blur-md"
-          : "border-transparent bg-white/60 backdrop-blur-sm"
+          ? "border-white/10 bg-zinc-950/90 shadow-[0_1px_0_0_rgba(0,0,0,0.2)] backdrop-blur-md"
+          : "border-transparent bg-zinc-950/55 backdrop-blur-sm"
       )}
     >
       <Container className="flex h-16 items-center justify-between lg:h-18">
@@ -48,7 +48,7 @@ export function SiteHeader() {
             <a
               key={link.href}
               href={link.href}
-              className="text-[13px] font-medium tracking-wide text-zinc-600 transition-colors hover:text-zinc-950"
+              className="text-[13px] font-medium tracking-wide text-white/70 transition-colors hover:text-white"
             >
               {link.label}
             </a>
@@ -56,7 +56,11 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden lg:block">
-          <Button asChild size="lg" className="rounded-full px-5">
+          <Button
+            asChild
+            size="lg"
+            className="rounded-full bg-white px-5 text-zinc-950 hover:bg-white/90"
+          >
             <a href="#consult">Schedule a consultation</a>
           </Button>
         </div>
@@ -66,7 +70,7 @@ export function SiteHeader() {
             <Button
               variant="ghost"
               size="icon"
-              className="text-zinc-950 lg:hidden"
+              className="text-white hover:bg-white/10 hover:text-white lg:hidden"
               aria-label="Open menu"
             >
               <Menu className="size-5" />
@@ -74,9 +78,10 @@ export function SiteHeader() {
           </SheetTrigger>
           <SheetContent
             side="right"
-            className="w-full bg-white sm:max-w-sm"
+            className="w-full border-white/10 bg-zinc-950 sm:max-w-sm"
+            style={{ color: "#ffffff" }}
           >
-            <SheetHeader className="border-b border-zinc-100 pb-4">
+            <SheetHeader className="border-b border-white/10 pb-4">
               <SheetTitle asChild>
                 <span>
                   <Logo className="h-7" />
@@ -88,7 +93,7 @@ export function SiteHeader() {
                 <SheetClose asChild key={link.href}>
                   <a
                     href={link.href}
-                    className="font-display rounded-lg px-2 py-3 text-2xl font-medium text-zinc-900 transition-colors hover:bg-zinc-50"
+                    className="font-display rounded-lg px-2 py-3 text-2xl font-medium text-white transition-colors hover:bg-white/5"
                   >
                     {link.label}
                   </a>
@@ -97,7 +102,11 @@ export function SiteHeader() {
             </nav>
             <div className="mt-auto px-4 pb-6">
               <SheetClose asChild>
-                <Button asChild size="lg" className="w-full rounded-full">
+                <Button
+                  asChild
+                  size="lg"
+                  className="w-full rounded-full bg-white text-zinc-950 hover:bg-white/90"
+                >
                   <a href="#consult">Schedule a consultation</a>
                 </Button>
               </SheetClose>
