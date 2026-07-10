@@ -185,35 +185,13 @@ button {
 .brand {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
   color: var(--white);
 }
 
-.brand__mark {
-  width: 2rem;
+.brand__logo {
+  width: clamp(9.5rem, 18vw, 13.75rem);
   height: auto;
-  flex-shrink: 0;
-}
-
-.brand__text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.05;
-}
-
-.brand__name {
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-}
-
-.brand__sub {
-  font-size: 0.55rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  opacity: 0.75;
+  display: block;
 }
 
 .nav {
@@ -354,7 +332,7 @@ button {
 .hero__content {
   position: relative;
   z-index: 1;
-  padding-block: 8rem calc(5rem + 150px);
+  padding-block: 8rem calc(5rem + 100px);
   width: min(100% - 2.5rem, var(--max));
   margin-inline: auto;
 }
@@ -582,7 +560,6 @@ button {
 .orbit__core img {
   width: 2.25rem;
   margin-bottom: 0.35rem;
-  filter: brightness(0) invert(1);
 }
 
 .orbit__core span {
