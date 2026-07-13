@@ -88,6 +88,13 @@ export const processSteps = [
   },
 ]
 
+export const processOutcome = {
+  eyebrow: "The Outcome",
+  title: "A defensible, benchmarked broker decision",
+  description:
+    "Every phase produces a record you can stand behind—so the final decision holds up to scrutiny, not just instinct.",
+}
+
 export const independencePoints = [
   "Fully independent of broker and carrier incentives",
   "Transparent recommendations you can act on",
@@ -108,6 +115,13 @@ export const testimonials = [
     title: "Mid-market employer partner",
   },
 ]
+
+export const experienceSummary = {
+  stat: "20+",
+  label: "Years of industry leadership",
+  description:
+    "Two decades spent inside brokerage, carrier, consulting, and employer organizations—perspective the market can't fake.",
+}
 
 export const experienceCards = [
   {

@@ -6,11 +6,22 @@ export function FinalCta() {
   return (
     <section
       id="consult"
-      className="relative isolate overflow-hidden bg-zinc-950 py-28 lg:py-36"
+      className="relative isolate overflow-hidden bg-gradient-to-b from-zinc-950 via-[#0a1830] to-zinc-950 py-28 lg:py-36"
     >
       <div
         aria-hidden
-        className="bg-brand/20 pointer-events-none absolute top-1/2 left-1/2 size-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[140px]"
+        className="bg-brand/30 pointer-events-none absolute top-1/2 left-1/2 size-[640px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[150px]"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-[0.05]"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
+          backgroundSize: "56px 56px",
+          maskImage:
+            "radial-gradient(ellipse 60% 60% at 50% 40%, black 0%, transparent 100%)",
+        }}
       />
 
       <Container className="relative flex flex-col items-center text-center">
@@ -21,7 +32,7 @@ export function FinalCta() {
         </Reveal>
 
         <Reveal delay={1} className="mt-5">
-          <h2 className="font-display max-w-2xl text-balance text-4xl leading-[1.08] font-medium text-white sm:text-5xl lg:text-6xl">
+          <h2 className="font-display max-w-3xl text-balance text-5xl leading-[1.05] font-medium text-white sm:text-6xl lg:text-7xl">
             Choose the right partner.
             <br />
             Build stronger outcomes.

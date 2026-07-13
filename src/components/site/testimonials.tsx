@@ -18,10 +18,11 @@ function initials(name: string) {
 
 export function Testimonials() {
   return (
-    <section className="bg-white py-24 lg:py-32">
+    <section className="bg-zinc-950 py-20 lg:py-28">
       <Container>
         <SectionHeading
           align="center"
+          tone="dark"
           eyebrow="Client Perspective"
           title="Trusted by leaders who demand clarity"
         />
@@ -29,23 +30,23 @@ export function Testimonials() {
         <div className="mt-16 grid gap-6 lg:grid-cols-2">
           {testimonials.map((testimonial, i) => (
             <Reveal key={testimonial.name} delay={Math.min(i, 3) as 0 | 1}>
-              <Card className="h-full rounded-2xl p-2 ring-zinc-900/5">
-                <CardContent className="flex h-full flex-col gap-6 px-6 py-4">
-                  <Quote className="text-brand/30 size-8" strokeWidth={1.5} />
-                  <p className="font-display flex-1 text-xl leading-relaxed text-zinc-800 italic">
+              <Card className="h-full rounded-2xl bg-white/[0.04] p-3 ring-1 ring-white/10">
+                <CardContent className="flex h-full flex-col gap-7 px-6 py-6">
+                  <Quote className="text-brand size-8" strokeWidth={1.5} />
+                  <p className="font-display flex-1 text-xl leading-relaxed text-white/90 italic">
                     "{testimonial.quote}"
                   </p>
-                  <div className="flex items-center gap-3 border-t border-zinc-100 pt-5">
+                  <div className="flex items-center gap-3 border-t border-white/10 pt-5">
                     <Avatar size="lg">
-                      <AvatarFallback className="bg-brand/10 text-brand font-medium">
+                      <AvatarFallback className="bg-brand/20 text-brand font-medium">
                         {initials(testimonial.name)}
                       </AvatarFallback>
                     </Avatar>
                     <div>
-                      <p className="text-sm font-semibold text-zinc-900">
+                      <p className="text-sm font-semibold text-white">
                         {testimonial.name}
                       </p>
-                      <p className="text-xs text-zinc-500">{testimonial.title}</p>
+                      <p className="text-xs text-white/50">{testimonial.title}</p>
                     </div>
                   </div>
                 </CardContent>

@@ -10,12 +10,12 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative isolate overflow-hidden bg-[#070c16] pt-36 pb-24 lg:pt-48 lg:pb-32"
+      className="relative isolate overflow-hidden bg-[#070c16] pt-32 pb-20 lg:pt-40 lg:pb-28"
     >
-      {/* Photography layer — right ~45% of the hero, blended into the navy field. */}
+      {/* Photography layer — right ~50% of the hero, blended into the navy field. */}
       <div
         aria-hidden
-        className="absolute inset-y-0 right-0 w-[62%] sm:w-[56%] lg:w-[48%]"
+        className="absolute inset-y-0 right-0 w-[64%] sm:w-[58%] lg:w-[51%]"
       >
         <img
           src={bannerImage}
@@ -64,7 +64,7 @@ export function Hero() {
         </Reveal>
 
         <Reveal delay={1} className="mt-8">
-          <h1 className="font-display max-w-md text-balance text-[2.75rem] leading-[1.06] font-medium tracking-tight text-white sm:max-w-lg sm:text-6xl lg:max-w-xl lg:text-[4.75rem]">
+          <h1 className="font-display max-w-md text-balance text-[2.75rem] leading-[1.05] font-medium tracking-tight text-white sm:max-w-lg sm:text-6xl lg:max-w-lg lg:text-[5rem]">
             The right advisor.
             <br />
             The right strategy.{" "}
@@ -84,7 +84,7 @@ export function Hero() {
           <Button
             asChild
             size="lg"
-            className="h-11 rounded-full px-6 text-[15px] ring-1 ring-white/10"
+            className="bg-brand hover:bg-brand/90 h-11 rounded-full px-6 text-[15px] text-white"
           >
             <a href="#consult">Schedule a consultation</a>
           </Button>

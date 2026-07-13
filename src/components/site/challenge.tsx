@@ -3,12 +3,13 @@ import { Check } from "lucide-react"
 import { SectionHeading } from "@/components/site/section-heading"
 import { Container } from "@/components/site/container"
 import { Reveal } from "@/components/site/reveal"
-import { painPoints, challengeSignals } from "@/lib/content"
+import { OrbitDiagram } from "@/components/site/orbit-diagram"
+import { painPoints } from "@/lib/content"
 
 export function Challenge() {
   return (
-    <section id="challenge" className="bg-white py-24 lg:py-32">
-      <Container className="grid gap-16 lg:grid-cols-2 lg:gap-20">
+    <section id="challenge" className="bg-brand-muted py-20 lg:py-28">
+      <Container className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <div className="flex flex-col">
           <SectionHeading
             eyebrow="The Challenge"
@@ -18,7 +19,7 @@ export function Challenge() {
 
           <Reveal
             delay={1}
-            className="mt-10 flex items-baseline gap-5 border-y border-zinc-100 py-8"
+            className="mt-8 flex items-baseline gap-5 border-y border-brand/15 py-6"
           >
             <p className="font-display text-brand text-6xl leading-none font-medium tracking-tight lg:text-7xl">
               35%
@@ -28,7 +29,7 @@ export function Challenge() {
             </p>
           </Reveal>
 
-          <ul className="mt-8 flex flex-col gap-4">
+          <ul className="mt-7 flex flex-col gap-4">
             {painPoints.map((point, i) => (
               <Reveal key={point} delay={Math.min(i, 3) as 0 | 1 | 2 | 3}>
                 <li className="flex items-start gap-3">
@@ -44,32 +45,9 @@ export function Challenge() {
           </ul>
         </div>
 
-        <div className="flex flex-col justify-center">
-          <dl className="divide-y divide-zinc-100 border-y border-zinc-100">
-            {challengeSignals.map((signal, i) => {
-              const Icon = signal.icon
-              return (
-                <Reveal
-                  key={signal.label}
-                  delay={Math.min(i, 3) as 0 | 1 | 2 | 3}
-                  className="flex items-start gap-4 py-6"
-                >
-                  <div className="bg-brand/10 flex size-10 shrink-0 items-center justify-center rounded-lg">
-                    <Icon className="text-brand size-5" strokeWidth={1.75} />
-                  </div>
-                  <div>
-                    <dt className="text-[15px] font-semibold text-zinc-900">
-                      {signal.label}
-                    </dt>
-                    <dd className="mt-1 text-sm leading-relaxed text-zinc-500">
-                      {signal.description}
-                    </dd>
-                  </div>
-                </Reveal>
-              )
-            })}
-          </dl>
-        </div>
+        <Reveal delay={1} className="flex flex-col items-center">
+          <OrbitDiagram />
+        </Reveal>
       </Container>
     </section>
   )
