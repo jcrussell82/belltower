@@ -4,9 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Container } from "@/components/site/container"
 import { Reveal } from "@/components/site/reveal"
-
-const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1529655683826-aba9b3e77383?auto=format&fit=crop&w=2000&q=80"
+import bannerImage from "@/assets/bannerimage.jpg"
 
 export function Hero() {
   return (
@@ -20,9 +18,9 @@ export function Hero() {
         className="absolute inset-y-0 right-0 w-[62%] sm:w-[56%] lg:w-[48%]"
       >
         <img
-          src={HERO_IMAGE}
+          src={bannerImage}
           alt=""
-          className="h-full w-full object-cover object-[56%_34%]"
+          className="h-full w-full object-cover object-[54%_28%]"
           loading="eager"
           fetchPriority="high"
         />
