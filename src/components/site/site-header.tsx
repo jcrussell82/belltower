@@ -40,7 +40,7 @@ export function SiteHeader() {
           aria-label="BellTower Strategy Group home"
           className="shrink-0"
         >
-          <Logo className="h-7 lg:h-8" />
+          <Logo className="h-8 lg:h-10" />
         </a>
 
         <nav className="hidden items-center gap-8 lg:flex">
@@ -84,7 +84,7 @@ export function SiteHeader() {
             <SheetHeader className="border-b border-white/10 pb-4">
               <SheetTitle asChild>
                 <span>
-                  <Logo className="h-7" />
+                  <Logo className="h-8" />
                 </span>
               </SheetTitle>
             </SheetHeader>

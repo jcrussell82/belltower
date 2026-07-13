@@ -1,3 +1,5 @@
+import { Check } from "lucide-react"
+
 import { SectionHeading } from "@/components/site/section-heading"
 import { Container } from "@/components/site/container"
 import { Reveal } from "@/components/site/reveal"
@@ -26,11 +28,16 @@ export function Challenge() {
             </p>
           </Reveal>
 
-          <ul className="mt-8 flex flex-col gap-5">
+          <ul className="mt-8 flex flex-col gap-4">
             {painPoints.map((point, i) => (
               <Reveal key={point} delay={Math.min(i, 3) as 0 | 1 | 2 | 3}>
-                <li className="border-brand/25 border-l-2 pl-4 text-[15px] leading-relaxed text-zinc-700">
-                  {point}
+                <li className="flex items-start gap-3">
+                  <span className="bg-brand/10 mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full">
+                    <Check className="text-brand size-3" strokeWidth={2.5} />
+                  </span>
+                  <span className="text-[15px] leading-relaxed text-zinc-700">
+                    {point}
+                  </span>
                 </li>
               </Reveal>
             ))}
