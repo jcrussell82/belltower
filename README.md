@@ -1,50 +1,35 @@
-# BellTower Strategy Group
+# Cascade CBX Sport — Homepage Mockup
 
-A premium marketing homepage for BellTower Strategy Group — an independent
-advisory firm that helps employers select, evaluate, and optimize their
-insurance broker relationship.
-
-Built as a production-ready React app with a small, cohesive design system
-on top of [shadcn/ui](https://ui.shadcn.com).
+Premium CBD-focused homepage mockup for **Cascade CBX Sport**, rebuilt from
+the existing BellTower Vite scaffold to match the client's teal / dark athletic
+brand and Meghan's CBD-forward copy map.
 
 ## Stack
 
 - **React 19 + TypeScript** via Vite
-- **Tailwind CSS v4** (CSS-first config, no `tailwind.config.js`)
-- **shadcn/ui** (`Button`, `Badge`, `Card`, `Avatar`, `Separator`, `Sheet`)
-- **Inter** (UI/body) + **Fraunces** (display headlines) via Fontsource
-- **lucide-react** for iconography
+- **Tailwind CSS v4**
+- **shadcn/ui** primitives
+- **Bebas Neue** + **Barlow Condensed** (display) + **Outfit** (body)
+- Brand imagery sourced from cascadecbxsport.com CDN assets
 
-## Design system
+## Homepage sections
 
-- **Type:** Inter carries the interface; Fraunces is reserved for headline
-  moments only, so hierarchy comes from font choice, not just size.
-- **Color:** near-black ink on white/`zinc-50`, a single brand-blue accent
-  (`--brand`, defined in `src/index.css`), and two dark "authority" sections
-  (`zinc-950`) that bookend the page — Independence and the final CTA.
-- **Spacing:** sections use `py-24 lg:py-32`; content sits in a
-  `max-w-6xl` container (`src/components/site/container.tsx`).
-- **Motion:** a single restrained scroll-reveal primitive
-  (`src/components/site/reveal.tsx`) — fade + 8px rise, once per element,
-  respects `prefers-reduced-motion`.
-
-Section components live in `src/components/site/`; copy/content lives in
-`src/lib/content.ts` so content and layout stay decoupled.
+1. Hero — Trust The Shield
+2. Reviews carousel
+3. Mission banner — Trust the Shield, Stay on the Field
+4. Find Your Recovery Solution — product grid
+5. NSF Certified for Sport® split section
+6. Developed by Athletes banner
+7. Trusted by Athletes Who Can't Afford to Fail a Test
+8. Trust the Shield + NSF bullet list
+9. NOPE banned-substances word cloud
+10. Explore NSF Certified topicals CTA
 
 ## Getting started
 
 ```bash
 npm install
-npm run dev       # start the dev server
-npm run build     # type-check and produce a production build in dist/
-npm run preview   # preview the production build locally
-npm run lint       # oxlint
+npm run dev
+npm run build
+npm run lint
 ```
-
-## Adding shadcn/ui components
-
-```bash
-npx shadcn@latest add <component>
-```
-
-Components are written to `src/components/ui/`.
