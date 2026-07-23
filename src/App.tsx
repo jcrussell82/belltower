@@ -1,27 +1,31 @@
 import { SiteHeader } from "@/components/site/site-header"
 import { Hero } from "@/components/site/hero"
-import { Challenge } from "@/components/site/challenge"
-import { Difference } from "@/components/site/difference"
-import { Approach } from "@/components/site/approach"
-import { Independence } from "@/components/site/independence"
-import { Testimonials } from "@/components/site/testimonials"
-import { Experience } from "@/components/site/experience"
-import { FinalCta } from "@/components/site/final-cta"
+import { Reviews } from "@/components/site/reviews"
+import { Mission } from "@/components/site/mission"
+import { ProductGrid } from "@/components/site/product-grid"
+import { NsfSplit } from "@/components/site/nsf-split"
+import { DevelopedBanner } from "@/components/site/developed-banner"
+import { TrustedBanner } from "@/components/site/trusted-banner"
+import { TrustBullets } from "@/components/site/trust-bullets"
+import { NopeSection } from "@/components/site/nope-section"
+import { Explore } from "@/components/site/explore"
 import { SiteFooter } from "@/components/site/site-footer"
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <SiteHeader />
       <main>
         <Hero />
-        <Challenge />
-        <Difference />
-        <Approach />
-        <Independence />
-        <Testimonials />
-        <Experience />
-        <FinalCta />
+        <Reviews />
+        <Mission />
+        <ProductGrid />
+        <NsfSplit />
+        <DevelopedBanner />
+        <TrustedBanner />
+        <TrustBullets />
+        <NopeSection />
+        <Explore />
       </main>
       <SiteFooter />
     </div>

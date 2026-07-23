@@ -1,39 +1,53 @@
-import { Separator } from "@/components/ui/separator"
 import { Container } from "@/components/site/container"
 import { Logo } from "@/components/site/logo"
 import { NAV_LINKS } from "@/lib/nav-links"
+import { shopUrl } from "@/lib/content"
 
 export function SiteFooter() {
   return (
-    <footer className="bg-white">
-      <Separator />
-      <Container className="flex flex-col gap-8 py-10 lg:flex-row lg:items-center lg:justify-between">
-        <div className="flex flex-col gap-4">
-          <Logo className="h-6" />
-          <p className="max-w-sm text-sm leading-relaxed text-zinc-500">
-            Objective advisory. Aligned incentives. Measurable outcomes.
+    <footer className="border-t border-white/10 bg-ink text-white">
+      <Container className="flex flex-col gap-10 py-12 lg:flex-row lg:items-start lg:justify-between">
+        <div className="max-w-sm space-y-4">
+          <Logo variant="white" className="h-8" />
+          <p className="text-sm leading-relaxed text-white/60">
+            NSF Certified for Sport® CBD topicals developed by athletes, for
+            athletes. Trust the shield. Stay on the field.
           </p>
         </div>
 
-        <nav className="flex flex-wrap gap-x-6 gap-y-2">
+        <nav className="flex flex-wrap gap-x-6 gap-y-3">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-xs font-medium tracking-wide text-zinc-500 transition-colors hover:text-zinc-950"
+              className="font-condensed text-sm font-semibold tracking-[0.1em] text-white/65 uppercase transition-colors hover:text-brand"
             >
               {link.label}
             </a>
           ))}
+          <a
+            href={shopUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="font-condensed text-sm font-semibold tracking-[0.1em] text-brand uppercase transition-colors hover:text-white"
+          >
+            Shop All
+          </a>
         </nav>
       </Container>
-      <Separator />
-      <Container className="py-6">
-        <p className="text-xs text-zinc-400">
-          &copy; {new Date().getFullYear()} BellTower Strategy Group. All
-          rights reserved.
-        </p>
-      </Container>
+
+      <div className="border-t border-white/10">
+        <Container className="flex flex-col gap-2 py-6 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
+          <p>
+            &copy; {new Date().getFullYear()} Cascade CBX Sport. All rights
+            reserved.
+          </p>
+          <p>
+            These statements have not been evaluated by the Food and Drug
+            Administration.
+          </p>
+        </Container>
+      </div>
     </footer>
   )
 }

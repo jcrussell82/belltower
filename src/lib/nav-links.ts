@@ -4,9 +4,9 @@ export interface NavLink {
 }
 
 export const NAV_LINKS: NavLink[] = [
-  { label: "Challenge", href: "#challenge" },
-  { label: "Difference", href: "#difference" },
-  { label: "Approach", href: "#approach" },
-  { label: "Independence", href: "#independence" },
-  { label: "Experience", href: "#experience" },
+  { label: "Shop", href: "#shop" },
+  { label: "Mission", href: "#mission" },
+  { label: "NSF Certified", href: "#nsf" },
+  { label: "Why Cascade", href: "#why" },
+  { label: "Reviews", href: "#reviews" },
 ]

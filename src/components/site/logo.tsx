@@ -1,12 +1,18 @@
 import { cn } from "@/lib/utils"
-import logoSvg from "@/assets/logo.svg"
+import logoBlue from "@/assets/cascade/logo-hor-blue.png"
+import logoWhite from "@/assets/cascade/logo-hor-white.png"
 
-export function Logo({ className }: { className?: string }) {
+type LogoProps = {
+  className?: string
+  variant?: "blue" | "white"
+}
+
+export function Logo({ className, variant = "blue" }: LogoProps) {
   return (
     <img
-      src={logoSvg}
-      alt="BellTower Strategy Group"
-      className={cn("h-9 w-auto object-contain object-left", className)}
+      src={variant === "white" ? logoWhite : logoBlue}
+      alt="Cascade CBX Sport"
+      className={cn("h-8 w-auto lg:h-9", className)}
     />
   )
 }
